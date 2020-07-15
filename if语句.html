@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+
+        <script>
+            //代码执行顺序
+            var a=10;
+            var b=20;
+            var temp=a;
+            a=b;
+            b=temp;
+            alert("a:"+a+"b:"+b);
+        </script>
+
+        <script>
+            var num=10;
+            if (num % 2 ==0 ) {
+                alert("这是一个偶数");
+            }
+        </script>
+
+        <script>
+            //比较大小
+            var num1=30;
+            var num2=20;
+            var max;
+            if (num1 > num2) {
+                max=num1;
+            }else{
+                max=num2;
+            }
+            console.log("最大值是："+max);
+        </script>
+
+        <script>
+            /*判断一个年份是否是闰年
+
+                1.闰年能够被400整除
+                2.闰年能够被4整除，但不能被100整除
+            */
+           var year=2008;
+           if (year % 400 ==0 || year % 4 ==0 && year % 100 !==0) {
+               console.log("是闰年");
+           }else{
+               console.log("不是闰年");
+           }
+        </script>
+    </head>
+    <body>    
+
+    </body>
+</html>

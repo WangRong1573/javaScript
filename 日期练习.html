@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var d = new Date();
+
+        var year = d.getFullYear();
+        var month = d.getMonth()+1;
+        var date = d.getDate();
+
+        var week = d.getDay();
+        if(week == 0){
+            week = "日";
+        }
+
+        var hour = d.getHours();
+        var minute = d.getMinutes();
+        var seconds = d.getSeconds();
+
+        console.log(year+"年"+month+"月"+date+"日"+hour+"时"+minute+"分"+seconds+"秒"+"\t"+"星期"+week+"\t");
+
+        //显示n天后的时间
+        function numOfDate(n) {
+            var d = new Date();
+            var date = d.getDate();
+            d.setDate(date+n);
+            return d;
+        }
+        alert(numOfDate(3).toLocaleDateString());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!-- 数组的方法 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var arr=['绿巨人','钢铁侠','蜘蛛侠'];
+
+        // push()
+        // 格式：数组.push(元素...)
+        // 功能：给数组末尾添加元素
+        arr.push("葫芦娃","数码宝贝");
+        // alert(arr);
+
+        //pop()
+        //格式：数组.pop()
+        //功能：移除数组末尾的最后一个元素
+        //返回值：移除的元素
+        var p=arr.pop();
+        // alert(p);
+
+        /*
+            shift()
+            格式：数组.shift()
+            功能：从数组的头部取下一个元素
+            返回值：取出的元素
+        */
+       var s=arr.shift();
+    //    alert(s);
+
+       /*
+            unshift()
+            格式：数组.unshift(参数...)
+            功能：从数组的头部插入元素
+            返回值：插入元素以后数组的长度
+       */
+      var u=arr.unshift("七仙女","马里奥");
+      alert(arr);
+      alert(u);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

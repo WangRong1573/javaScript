@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日期对象</title>
+    <script>
+        //日期对象的创建
+        var d = new Date();  //不传参时默认返回当前时间
+        //参数可以是以下几种：
+        e = new Date("2020-2-12");
+        f = new Date("2020/10/23");
+        g = new Date(2020,2,23,12,23,32);
+        // alert(g);
+
+        // //日期对象的格式化方法
+        // alert(g.toDateString());
+
+        alert(d.toLocaleDateString());
+
+        /*
+            获取一周中的某一天从0开始，0代表周日
+            getDay(); 只能获取不能设置
+            获取月份的时候，从0开始
+            get/setMonth();
+
+            set/getTime() 设置/获取当前日期距离1970年的毫秒数
+
+            Date.parse("2019-8-24");
+            参数：是一个日期格式的字符串
+            功能：返回日期的毫秒数
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

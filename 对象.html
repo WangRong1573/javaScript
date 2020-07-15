@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象</title>
+    <script>
+        /*创建对象的集中方式
+            1.var person = new Object();
+            2.var person = Object();
+            3.var person = {};  常用
+        */
+        var person = {
+            name : "liaoning",
+            age : 24,
+            skills :[
+                "java",
+                "python",
+                "php"
+            ],
+            //函数也是引用数据类型， 函数名 == 函数所在的地址
+            showName : function(){
+                return 1 ;
+            }
+        };
+
+        //访问
+        alert(person.name);
+        alert(person.skills);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

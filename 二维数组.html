@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //生成一个二维数组，每个组5个数，1-25
+        var num=1;
+        var arr=[];
+        var tep=0;
+        for(var i = 0; i < 5 ; i++){//生成5个数组存储在arr中
+            newArray=[];
+            for(var j = 0; j < 5; j++){
+                newArray.push(num++);
+            }
+            arr.push(newArray);
+        }
+        console.log(arr.toString());
+
+        //打印三角形
+        for(var i = 0 ; i < arr.length ; i++){
+            for(var j = 0 ; j <= i; j++){
+                document.write(arr[i][j]+"\t");
+            }
+            document.write("<br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

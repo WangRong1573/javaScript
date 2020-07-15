@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+           width: 300px;
+           height: 300px;
+           background-color: red; 
+        }
+    </style>
+    <script>
+        /*
+            createElement()
+            格式:document。createElement(标签名);
+
+            appendChild()
+            格式：parent.appendChild(newNode)
+            功能：将newNode插入到parent子节点的末尾
+
+            createTextNode()
+            格式：document.createTextNode(文本)
+            功能：创建文本节点
+        */
+        window.onload = function () {
+            var btn = document.getElementById("btn");
+            var div = document.getElementById("div1");
+            btn.onclick = function () {
+                var node = document.createElement("span");
+                div.appendChild(node);
+              }
+          }
+
+        //   createTextNode()
+        //     格式：document.createTextNode(文本)
+        //     功能：创建文本节点
+
+        window.onload = function () {
+            var btn = document.getElementById("btn");
+            var div = document.getElementById("div1");
+            btn.onclick = function () {
+                //创建span节点
+                var node = document.createElement("span");
+                //给span节点添加文本
+                var tex = document.createTextNode("文本内容");
+                
+                //将文本插入到节点中
+                node.appendChild(tex);
+
+                div.appendChild(node);
+                
+              }
+          }
+
+
+          //封装一个创建一个带文本的元素节点
+          function createElementWithText(tagName,txt) {
+              var node = document.createElement(tagName);
+              var txt = document.createTextNode(txt);
+              node.appendChild(txt);
+              return node;
+          }
+
+          createElementWithText("span","文本内容");
+
+        //   //等同于：
+        //   //创建span节点
+        //   var node = document.createElement("span");
+        //   //给span节点添加文本
+        //   var tex = document.createTextNode("文本内容");
+                
+        //   //将文本插入到节点中
+        //  node.appendChild(tex);
+
+    </script>
+</head>
+<body>
+    <div id="div1">
+        <p>p</p>
+        <em>斜体</em>
+    </div>
+    <button id="btn">按钮</button>
+</body>
+</html>

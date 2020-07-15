@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        window.onload=function(){
+            var text=document.getElementById("demoId");
+            var btn=document.getElementById("btn");
+
+            //点击事件触发时，将文本清空
+            btn.onclick=function(){
+                text.value="";      
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="demoId" value="默认文字">
+    <button id="btn" >重置</button>
+</body>
+</html>

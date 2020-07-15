@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            //属性节点
+            window.onload = function(){
+                var div = document.getElementById("div1");
+                // alert(div.attributes);  //[object NamedNodeMap]
+                // alert(div.attributes.length);  //4
+
+                //访问属性节点
+                /*
+                    属性节点
+                    nodeName  nodeType  nodeValue
+                    属性名      类型2       值
+                */
+                alert(div.attributes["id"].nodeName);
+                alert(div.attributes["id"].nodeType);
+                alert(div.attributes["id"].nodeValue);
+            }
+    </script>
+</head>
+<body>
+    <div id="div1" title="xxx" name="yyy" class="ccc"></div>
+</body>
+</html>

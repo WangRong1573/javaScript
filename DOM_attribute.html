@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            set/getAttribute()
+            removeAttribute()
+            都是操作当前元素节点中的某个属性
+        */
+        window.onload = function(){
+            var div = document.getElementById("div1");
+            console.log(div.title);
+            console.log(div.className);
+
+            //赋值方式设置title和className
+            div.title = "xxx";
+            div.className = "box2";
+
+            console.log(div.title);
+            console.log(div.className);
+
+            //获取title
+            console.log(div.getAttribute("title"));
+
+            //设置
+            div.setAttribute("title","yyy");
+
+            /*
+                上述两种操作的区别
+                <1>class属性范围区别 点 方式操作是通过className，而set/getAttribute是通过class
+                <2>设置用户自定义属性
+                    //div.xxx="ttt";
+                    //div.setAttribute("xxx","yyy");
+                    当元素节点不存在xxx属性时，第一种方式将不会被设置，通过set方式会将xxx属性添加到元素节点中
+
+            */
+
+            div.removeAttribute("title"); //点方式无法删除属性，只能将属性值置为空
+        }
+    </script>
+</head>
+<body>
+    <div id="div1" title="hello" name="world" class="box">
+
+    </div>
+</body>
+</html>

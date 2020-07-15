@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 数组方法： -->
+    <script>
+        
+        var arr=[1,3,5,9,7,6,4];
+
+
+        //foreach 遍历数组
+        arr.forEach(function(item){
+            console.log(item);
+        })
+
+        console.log("-------------------------------------");
+
+        //map 映射： 遍历-->操作-->返回
+        arr.map(function(item){
+            console.log(item);
+        })
+
+        //reduce 归并
+        //pre上一次遍历return后面的值 next当前遍历到的元素
+        arr.reduce(function(pre,next,index,array){
+
+        })
+
+        //filter过滤,返回符合条件的值
+        var res = arr.filter(function(item){
+            return item > 3 ;
+        })
+        alert(res);
+
+        //some 判断return后面的条件是否成立，成立返回true，否则返回false
+        var a = arr.some(function(item){
+            return item == 8 ;//判断数组中是否包含 8
+        });
+        alert(a);
+
+        //every 功能跟some一样，但要求每一项都符合才返回true，否则返回false
+        var b = arr.every(function (item) {
+            return item >= 1 ; //判断数组中每个值是否大于1
+          });
+          alert(b);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
